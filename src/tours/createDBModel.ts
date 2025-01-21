@@ -56,7 +56,7 @@ export default async function createDBModel(): Promise<ITours> {
 			file: 'apps/meteor/server/models.ts',
 			description:
 				"## Registering\n\n### Here we are using the registerModel import and passing 'IMessageModel' and then we pass in db and trashCollection into MessageRaw Class\n\n### The register model function looks something like this -\n```\nfunction registerModel<TModel extends IBaseModel<any, any, any>>(name: string, instance: TModel | (() => TModel)): void;\n```\n\n### And we pass data into it like - \n```\n registerModel('IMessagesModel', new MessagesRaw(db, trashCollection));\n //It becomes something like this, Here IMessageModel is basically implemented in MessagesRaw as we saw in previous steps\n registerModel<MessagesRaw>(name: string, instance: MessagesRaw | (() => MessagesRaw)): void\n```",
-			searchString: "registerModel(",
+			searchString: "registerModel('IMessagesModel'",
 		},
 
 	]
