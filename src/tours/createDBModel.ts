@@ -48,14 +48,28 @@ export default async function createDBModel(): Promise<ITours> {
 			title: "Registering a DB model 1",
 			file: 'apps/meteor/server/models.ts',
 			description:
-				"## Registering a DB model\n\n### Now let us see how can we register any DB model\n\n### 1 - First of all we need to import *registerModel* from *@rocket.chat/models*\n\n### 2 - Import MessagesRaw- The DB model Class we created which includes operations, and we are also importing db, trashCollection- It contains deleted messages",
-			searchString: "registerModel",
+				"## Registering a DB model\n\n### Now let us see how can we register any DB model\n\n### 1 - First of all we need to import *registerModel* from *@rocket.chat/models*",
+			searchString: "registerModel,",
 		},
 		{
 			title: "Registering a DB model 2",
 			file: 'apps/meteor/server/models.ts',
 			description:
-				"## Registering\n\n### Here we are using the registerModel import and passing 'IMessageModel' and then we pass in db and trashCollection into MessageRaw Class\n\n### The register model function looks something like this -\n```\nfunction registerModel<TModel extends IBaseModel<any, any, any>>(name: string, instance: TModel | (() => TModel)): void;\n```\n\n### And we pass data into it like - \n```\n registerModel('IMessagesModel', new MessagesRaw(db, trashCollection));\n //It becomes something like this, Here IMessageModel is basically implemented in MessagesRaw as we saw in previous steps\n registerModel<MessagesRaw>(name: string, instance: MessagesRaw | (() => MessagesRaw)): void\n```",
+				"### 2 - Import MessagesRaw- The DB model Class we created which includes operations, and we are also importing db, trashCollection- It contains deleted messages",
+			searchString: "MessagesRaw,",
+		},
+		{
+			title: "Registering a DB model 3",
+			file: 'apps/meteor/server/models.ts',
+			description:
+				"### 3 - we are also importing db, trashCollection- It contains deleted messages",
+			searchString: "import { db",
+		},
+		{
+			title: "Registering a DB model 4",
+			file: 'apps/meteor/server/models.ts',
+			description:
+				"## 4 - Registering\n\n### Here we are using the registerModel import and passing 'IMessageModel' and then we pass in db and trashCollection into MessageRaw Class\n\n### The register model function looks something like this -\n```\nfunction registerModel<TModel extends IBaseModel<any, any, any>>(name: string, instance: TModel | (() => TModel)): void;\n```\n\n### And we pass data into it like - \n```\n registerModel('IMessagesModel', new MessagesRaw(db, trashCollection));\n //It becomes something like this, Here IMessageModel is basically implemented in MessagesRaw as we saw in previous steps\n registerModel<MessagesRaw>(name: string, instance: MessagesRaw | (() => MessagesRaw)): void\n```",
 			searchString: "registerModel('IMessagesModel'",
 		},
 
